@@ -1,0 +1,24 @@
+GUIA DE ESTILO:
+---------------------------------------------------------------------
+	- VARIABLES:
+		- Globales en mayusculas
+		- locales en minusculas
+		- Si son privadas con '_'al principio
+ 		- si la forman mas de dos palabras, separadas con '_'
+	- PLAYBOOKS:
+		- Si se repite la task mas de una vez, se crea un rol.
+		- Los tags se escribirán cone espacio {{ tag }}
+		- Comillas siempre simples (')
+	- MULTILINEAS:
+		- Todos los condicionantes separados con palabras (or, and, etc.)
+
+WORKFLOW:
+----------------------------------------------------------------------
+	- Cada uno tendra que realizar una rama con su codigo de tarea definido
+	  en el KANBAN. 
+	- Una vez este finalizada la tarea, se realiza merge a la rama develop 
+	  donde será validado por el analista del equipo.
+	- Tras tener todo validado se subirá con jenkins al portal de PRE para que
+	  el Product Owner lo valide.
+	- Si el product owner lo da como OK, se realiza merge a la rama master a la
+	  espera de un dia de IOP hacer deploy con jenkins desde la rama master a PRO.
