@@ -22,3 +22,10 @@ WORKFLOW:
 	  el Product Owner lo valide.
 	- Si el product owner lo da como OK, se realiza merge a la rama master a la
 	  espera de un dia de IOP hacer deploy con jenkins desde la rama master a PRO.
+ Desde la máquina remota debemos hacer un pull
+
+git pull origin master
+editar el fichero que corresponda
+git add *
+git commit -m "mensaje"
+git push origin master
